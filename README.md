@@ -21,7 +21,7 @@ A standalone browser-based tool for processing earthquake acceleration records, 
 
 Open `index.html` in a modern browser or serve the repository with any static web server.
 
-The application is self-contained and requires no build step. Internet access is used only to load the shared Building Response record library when available.
+The application is fully self-contained, including its earthquake record library, and requires no build step or network access to function.
 
 ## Scope
 
