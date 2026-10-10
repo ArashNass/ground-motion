@@ -60,6 +60,10 @@ select,input[type=number],input[type=text]{width:100%;min-height:40px;border:1px
 @media(max-width:1180px){.metrics{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:1000px){.layout{grid-template-columns:1fr}.controls{position:static;max-height:none}.summary-grid{grid-template-columns:1fr}.page{width:min(100% - 20px,1360px)}}
 @media(max-width:720px){.hd-in{padding:12px 14px;display:block}.hd-links{margin-top:10px;gap:11px;flex-wrap:wrap}.head{grid-template-columns:1fr}.tool-id{text-align:left}.metrics{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.canvas-wrap.tall{height:350px}.ft-in{display:block;padding:16px 14px}.ft-links{margin-top:10px;flex-wrap:wrap}}
+/* phone layout: let grid tracks shrink below their content so nothing pushes the page wider than the screen */
+@media(max-width:1180px){.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:1000px){.layout,.main,.summary-grid{grid-template-columns:minmax(0,1fr)}.layout>*,.main>*,.summary-grid>*{min-width:0}}
+@media(max-width:720px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{padding:12px}.metric span,.metric strong,.metric small{overflow-wrap:anywhere}.two,.upload{grid-template-columns:minmax(0,1fr)}.card canvas,.canvas-wrap{max-width:100%}}
 </style>
 <meta name="author" content="Arash Nassirpour">
 <meta name="robots" content="index, follow, max-image-preview:large">
